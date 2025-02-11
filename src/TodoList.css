@@ -1,0 +1,36 @@
+/* .todo-list {
+    width: 290px;
+    margin: 0 auto;
+    text-align: Center;
+    background-color: rgb(177, 162, 162);
+    padding: 100px;
+  }
+  
+  .todo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0;
+    padding: 20px;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 20px;
+    margin: 5px 0;
+  }
+  
+  button {
+    margin-left: 10px;
+    padding: 18px;
+    background-color: #28c54f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+   */

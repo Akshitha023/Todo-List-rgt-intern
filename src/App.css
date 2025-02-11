@@ -1,38 +1,497 @@
-.App {
+/* body{
+  background-color: rgb(0, 0, 0);
+  color: rgb(232, 230, 230);
+  overflow: hidden;
+}
+
+h1{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.todo-wrapper{
+  background-color: rgb(57, 58, 60);
+  padding: 2%;
+  width:max-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3%;
+  height: 8%;
+  overflow: auto;
+  box-shadow: 0px 5px 7px rgb(10, 10, 10);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todo-input{
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  border-bottom: 2px solid rgb(10, 10, 10);
+  padding-bottom: 2px;
+  margin-bottom: 2px;
+}
+
+.todo-input-item{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 26px;
+  padding: 30px;
+  background-color: rgb(86, 83, 89);
+  box-shadow: 0px rgb(158, 148, 148);
+}
+
+.todo-input-item label{
+  font-weight: bold;
+  margin-bottom: 10px;
+  width: 30px;
+  height: 30px;
+ 
+}
+
+.todo-input-item input{
+  font-weight: bold;
+  margin-bottom: 10px;
+  width: 250px;
+  height: 70px;
+}
+
+.todo-input-item input:focus{
+  outline: 2px solid rgb(1, 30, 16);
+}
+
+.primaryBtn{
+  background-color: rgb(1, 17, 4);
+  color: white;
+  border-radius: 0px;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+}
+
+.secondaryBtn{
+  background-color: rgb(216, 212, 220);
+  cursor: pointer;
+  width: 100px;
+  height: 50px;
+  padding: 10px;
+}
+
+.btn-area{
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+.active{
+  background-color: rgb(55, 138, 72);
+  height: 60px;
+  width: 100px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.todo-list{
+  display: flex;
+  flex-direction: column;
+  padding: 39px;
+}
+
+.todo-list-item{
+  background-color: rgb(248, 241, 248);
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  font-size: 27px;
+}
+
+.todo-list-item h3{
+  font-size: 21px;
+  background-color: rgb(9, 9, 9);
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+  margin-top: 8px;
+}
+
+.todo-list-item p{
+  font-size: 25px;
+  color: rgb(6, 8, 10);
+  margin-top: 5%;
+}
+
+.icon{
+  font-size: 65px;
+  cursor: pointer;
+  background-color: black;
+  margin-bottom: 2px;
+  padding-left: 8px;
+  padding-right: 3px;
+}
+
+.icon:hover{
+  color: brown;
+}
+
+.check-icon{
+  font-size: 65px;
+  cursor: pointer;
+  margin-bottom: 2px;
+  
+}
+
+
+.check-icon:hover{
+  color: rgb(5, 87, 38);
+} */
+
+
+
+
+/* body {
+  background-color: rgb(248, 244, 244);
+  color: rgb(9, 8, 8);
+  overflow: hidden;
+}
+
+h1 {
+  text-align: center;
+font-size: 40px;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+-webkit-text-stroke: 3px rgb(64, 61, 64);
+color: rgb(42, 42, 38);
+  border-right: 8px soild rgb(176, 159, 176);
+}
+
+h1::before{
+  height: 100%;
+  color: rgb(187, 28, 187);
+  border-right: 8px soild rgb(176, 159, 176);
+  
+  width: 0%;
+  position: absolute;
+}
+
+
+
+
+
+
+
+.todo-wrapper {
+  background-color: rgb(249, 249, 255);
+  padding: 1%;
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3%;
+  height: auto; 
+  overflow: auto;
+  box-shadow: 0px 5px 7px rgb(4, 3, 3);
+}
+
+.todo-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid rgb(242, 237, 237);
+  padding-bottom: 1px;
+  margin-bottom: 6px;
+}
+
+.todo-input-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 29px;
+  padding: 30px;
+  background-color: rgb(240, 238, 243);
+  box-shadow: 0px rgb(125, 42, 42);
+}
+
+.todo-input-item label {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 29px;
+}
+
+.todo-input-item input {
+  font-weight: bold;
+  margin-bottom: 10px;
+  width: 250px;
+  height: 70px;
+  font-size: 18px;
+}
+
+.todo-input-item input:focus {
+  outline: 2px solid rgb(108, 15, 104);
+}
+
+.primaryBtn {
+  background-color: rgb(84, 35, 95);
+  color: white;
+  border-radius: 1px;
+  cursor: pointer;
+  width: 69px;
+  height: 70px;
+
+}
+
+.secondaryBtn {
+  background-color: rgb(216, 212, 220);
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  padding: 100px;
+}
+
+.btn-area {
+  display: flex; 
+  justify-content: center; 
+  gap: 35px; 
+  margin-bottom: 15px;
+}
+
+.isCompleteScreen {
+  padding: 10px 20px; 
+  border: none;
+  cursor: pointer;
+  background-color: rgb(193, 189, 198);
+  color: rgb(4, 4, 4);
+}
+
+.isCompleteScreen.active {
+  background-color: rgb(3, 31, 8);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  padding: 39px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo-list-item {
+  background-color: rgb(197, 191, 197);
+  display: flex;
+  justify-content: space-between;
+  padding: 1px;
+  font-size: 27px;
 }
+
+.todo-list-item h3 {
+  font-size: 21px;
+  background-color: rgb(173, 163, 163);
+  display: flex;
+  justify-content: space-between;
+  padding: 1px;
+  margin-top: 1px;
+  color: black;
+}
+
+.todo-list-item p {
+  font-size: 25px;
+  color: rgb(6, 8, 10);
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+.icon {
+  font-size: 35px;
+  cursor: pointer;
+  background-color: black;
+  margin-bottom: 2px;
+  padding-left: 20px;
+  padding-right: 30px;
+}
+
+.icon:hover {
+  color: rgb(124, 6, 6);
+}
+
+.check-icon {
+  font-size: 35px;
+  cursor: pointer;
+  margin-bottom: 2px;
+}
+
+.check-icon:hover {
+  color: rgb(5, 87, 38);
+} */
+
+
+body {
+  background-color: rgb(248, 244, 244);
+  color: rgb(9, 8, 8);
+  overflow: hidden;
+}
+
+h1 {
+  text-align: center;
+  font-size: 69px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: rgb(42, 42, 38);
+  border-right: 8px solid rgb(176, 159, 176);
+}
+
+h1::before {
+  height: 100%;
+  color: rgb(187, 28, 187);
+  border-right: 8px solid rgb(176, 159, 176);
+  width: 0%;
+  position: absolute;
+}
+
+.todo-wrapper {
+  background-color: rgb(249, 249, 255);
+  padding: 1%;
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3%;
+  height: auto; 
+  overflow: auto;
+  box-shadow: 0px 5px 7px rgb(12, 12, 12);
+}
+
+.todo-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid rgb(242, 237, 237);
+  padding-bottom: 1px;
+  margin-bottom: 6px;
+}
+
+.todo-input-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 10px;
+
+  padding: 10px;
+  background-color: rgb(240, 238, 243);
+  box-shadow: 0px rgb(238, 5, 5);
+  height: 60px;
+}
+
+.todo-input-item label {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 20px;
+  padding: 5px;
+}
+
+.todo-input-item input {
+  font-weight: bold;
+  margin-bottom: 10px;
+  width: 259px;
+  height: 30px;
+  font-size: 18px;
+}
+
+.todo-input-item input:focus {
+  outline: 2px solid rgb(25, 4, 63);
+}
+
+
+.todo-input-item-btn{
+  width: 69px;
+  height: 30px;
+  align-self:flex-end; 
+}
+.primaryBtn {
+  background-color: rgb(32, 6, 97);
+  color: white;
+  border-radius: 1px;
+  cursor: pointer;
+  width: 70px;
+  height: 39px;
+  align-self:flex-end; 
+}
+
+.secondaryBtn {
+  background-color: rgb(12, 7, 88);
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  padding: 100px;
+}
+
+.btn-area {
+  display: flex; 
+  justify-content: center; 
+  gap: 35px; 
+  margin-bottom: 15px;
+  padding: 18px;
+}
+
+.isCompleteScreen {
+  padding: 10px 20px; 
+  border: none;
+  cursor: pointer;
+  background-color: rgb(217, 214, 220);
+  color: rgb(4, 4, 4);
+}
+
+.isCompleteScreen.active {
+  background-color: rgb(19, 6, 66);
+  color: white;
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  padding: 39px;
+}
+
+.todo-list-item {
+  background-color: rgb(210, 208, 210);
+  display: flex;
+  justify-content: space-between;
+  padding: 1px;
+  font-size: 27px;
+}
+
+.todo-list-item h3 {
+  font-size: 21px;
+  display: flex;
+  justify-content: space-between;
+  padding: 1px;
+  margin-top: 1px;
+  color: black;
+}
+
+.todo-list-item p {
+  font-size: 25px;
+  color: rgb(6, 8, 10);
+  margin-top: 1%;
+  margin-bottom: 0%;
+}
+
+.icon {
+  font-size: 35px;
+  cursor: pointer;
+  margin-bottom: 0px;
+  padding-left: 10px;
+  padding-right: 1px;
+  height: 100px;
+}
+
+.icon:hover {
+  color: rgb(124, 6, 6);
+}
+
+.check-icon {
+  font-size: 49px;
+  cursor: pointer;
+  margin-bottom: 1px;
+  height: 100px;
+
+}
+
+.check-icon:hover {
+  color: rgb(8, 95, 43);
+}
+
+
+
+
